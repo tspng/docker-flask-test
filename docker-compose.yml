@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+    nginx:
+        build: ./nginx
+        depends_on:
+            - app
+
+    app:
+        build: ./app
+        expose:
+            - "8000"
